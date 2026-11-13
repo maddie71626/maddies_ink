@@ -47,12 +47,6 @@
     .about-copy h2{margin-bottom:20px}
     .booking-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px}
     .booking-note{color:var(--muted);font-size:14px}
-    .deposit-box{border:1px solid #45413c;background:linear-gradient(145deg,#1b1a18,#121212);padding:20px;margin:22px 0}
-    .deposit-box .eyebrow{color:var(--accent);margin-bottom:8px}
-    .deposit-box p{margin:0 0 10px;color:#d4d0c9;font-size:13px;line-height:1.55}
-    .deposit-box p:last-child{margin-bottom:0}
-    .deposit-box a{color:var(--ink);text-decoration:underline;font-weight:600}
-    .deposit-box a:hover{color:#fff}
     form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     .field{display:flex;flex-direction:column;gap:7px}
     .field.full{grid-column:1/-1}
@@ -60,7 +54,7 @@
     input,select,textarea{width:100%;background:#151515;border:1px solid #45413c;color:var(--ink);padding:13px 12px;border-radius:0;outline:none}
     input:focus,select:focus,textarea:focus{border-color:#c9c1b6}
     textarea{min-height:115px;resize:vertical}
-    .check{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:12px;line-height:1.4;text-transform:none;letter-spacing:normal}
+    .check{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:12px;line-height:1.4}
     .check input{width:auto;margin-top:2px}
     .form-message{grid-column:1/-1;color:#d8d1c7;font-size:13px;min-height:20px}
     footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:11px;letter-spacing:.08em}
@@ -87,7 +81,7 @@
         <a class="btn" href="#booking">Start a booking request</a>
       </div>
       <div class="hero-art" aria-label="Decorative black and white floral tattoo illustration">
-        <svg class="flash" viewBox="0 0 360 440" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <svg class="flash" viewBox="0 0 360 440" fill="none" xmlns="http://w3.org" aria-hidden="true">
           <g stroke="#e1dbd1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M178 405C164 340 208 302 185 244C164 190 196 133 177 55"/>
             <path d="M181 282C127 263 100 226 94 176C139 182 171 213 181 282Z"/>
@@ -121,5 +115,9 @@
           <div class="piece">
             <svg viewBox="0 0 200 240" fill="none" stroke="#e4ddd2" stroke-width="1.4"><path d="M100 215C80 165 125 130 95 83C77 55 88 31 105 15C121 42 124 61 108 84C88 115 124 151 100 215Z"/><path d="M99 153C61 143 48 111 53 82C85 92 101 116 99 153Z"/><path d="M106 185C143 166 156 136 146 107C117 121 104 150 106 185Z"/><path d="M95 84C75 66 72 43 83 26M108 85C133 64 135 43 123 25"/></svg>
             <div class="piece-label">Fine-line botanicals</div>
+          </div>
+          <div class="piece">
+            <svg viewBox="0 0 200 240" fill="none" stroke="#e4ddd2" stroke-width="1.3"><circle cx="100" cy="115" r="64"/><circle cx="100" cy="115" r="48"/><path d="M100 35C113 60 113 82 100 115C87 82 87 60 100 35ZM100 195C87 170 87 148 100 115C113 148 113 170 100 195ZM20 115C45 102 67 102 100 115C67 128 45 128 20 115ZM180 115C155 128 133 128 100 115C133 102 155 102 180 115Z"/><path d="M44 59L156 171M156 59L44 171"/></svg>
+            <div class="piece-label">Ornamental geometry</div>
           </div>
           <div class="piece">
