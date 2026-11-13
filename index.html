@@ -1,4 +1,4 @@
-!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -47,6 +47,12 @@
     .about-copy h2{margin-bottom:20px}
     .booking-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px}
     .booking-note{color:var(--muted);font-size:14px}
+    .deposit-box{border:1px solid #45413c;background:linear-gradient(145deg,#1b1a18,#121212);padding:20px;margin:22px 0}
+    .deposit-box .eyebrow{color:var(--accent);margin-bottom:8px}
+    .deposit-box p{margin:0 0 10px;color:#d4d0c9;font-size:13px;line-height:1.55}
+    .deposit-box p:last-child{margin-bottom:0}
+    .deposit-box a{color:var(--ink);text-decoration:underline;font-weight:600}
+    .deposit-box a:hover{color:#fff}
     form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     .field{display:flex;flex-direction:column;gap:7px}
     .field.full{grid-column:1/-1}
@@ -54,7 +60,7 @@
     input,select,textarea{width:100%;background:#151515;border:1px solid #45413c;color:var(--ink);padding:13px 12px;border-radius:0;outline:none}
     input:focus,select:focus,textarea:focus{border-color:#c9c1b6}
     textarea{min-height:115px;resize:vertical}
-    .check{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:12px;line-height:1.4}
+    .check{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:12px;line-height:1.4;text-transform:none;letter-spacing:normal}
     .check input{width:auto;margin-top:2px}
     .form-message{grid-column:1/-1;color:#d8d1c7;font-size:13px;min-height:20px}
     footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:11px;letter-spacing:.08em}
@@ -117,82 +123,3 @@
             <div class="piece-label">Fine-line botanicals</div>
           </div>
           <div class="piece">
-            <svg viewBox="0 0 200 240" fill="none" stroke="#e4ddd2" stroke-width="1.3"><circle cx="100" cy="115" r="64"/><circle cx="100" cy="115" r="48"/><path d="M100 35C113 60 113 82 100 115C87 82 87 60 100 35ZM100 195C87 170 87 148 100 115C113 148 113 170 100 195ZM20 115C45 102 67 102 100 115C67 128 45 128 20 115ZM180 115C155 128 133 128 100 115C133 102 155 102 180 115Z"/><path d="M44 59L156 171M156 59L44 171"/></svg>
-            <div class="piece-label">Ornamental geometry</div>
-          </div>
-          <div class="piece">
-            <svg viewBox="0 0 200 240" fill="none" stroke="#e4ddd2" stroke-width="1.4"><path d="M100 24C113 55 151 65 157 105C165 153 129 190 100 214C71 190 35 153 43 105C49 65 87 55 100 24Z"/><path d="M100 55C107 79 129 90 133 115C137 143 118 165 100 181C82 165 63 143 67 115C71 90 93 79 100 55Z"/><path d="M100 80L116 115L100 151L84 115L100 80Z"/></svg>
-            <div class="piece-label">Symbolic pieces</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="about">
-      <div class="wrap about-grid">
-        <div class="about-card"><div class="eyebrow">Maddies Ink</div><div class="big">M.</div><p>Personal designs, considered placement and clear communication from first idea to appointment request.</p></div>
-        <div class="about-copy"><div class="eyebrow">The approach</div><h2>Your idea, carefully considered.</h2><p>Every tattoo starts with a conversation. Share the style you have in mind, where you want the piece and any references that help explain your idea.</p><p>Submitting this form is a request only. Your appointment is not confirmed until the studio has reviewed the details and replied directly.</p><a class="btn outline" href="#booking">Discuss your idea</a></div>
-      </div>
-    </section>
-
-    <section class="section" id="booking">
-      <div class="wrap booking-grid">
-        <div>
-          <div class="eyebrow">Take the first step</div>
-          <h2>Request a booking.</h2>
-          <p class="booking-note">Tell us a little about the tattoo you have in mind. We will review your request and follow up to discuss availability, design and pricing.</p>
-          <p class="booking-note"><strong>Currency:</strong> USD<br><strong>Status:</strong> Requests require studio approval.</p>
-          <p class="legal">Tattoo services are subject to local laws and age requirements. Requests are accepted only from people who meet the legal minimum age in their location. A valid ID may be required by the artist. This website is a request form, not a confirmation of service.</p>
-        </div>
-        <form id="bookingForm">
-          <div class="field"><label for="name">Full name</label><input id="name" name="name" autocomplete="name" required></div>
-          <div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-          <div class="field"><label for="style">Tattoo style</label><select id="style" name="style" required><option value="">Choose a style</option><option>Fine line</option><option>Blackwork</option><option>Traditional</option><option>Realism</option><option>Ornamental</option><option>Custom / not sure</option></select></div>
-          <div class="field"><label for="placement">Body placement</label><input id="placement" name="placement" placeholder="e.g. upper arm" required></div>
-          <div class="field"><label for="size">Approximate size</label><select id="size" name="size"><option>Small</option><option>Medium</option><option>Large</option><option>Not sure yet</option></select></div>
-          <div class="field"><label for="date">Preferred date</label><input id="date" name="date" type="date"></div>
-          <div class="field full"><label for="details">Tell us about your idea</label><textarea id="details" name="details" placeholder="Describe the design, meaning, approximate dimensions or any references you have." required></textarea></div>
-          <div class="field full"><label class="check"><input type="checkbox" required><span>I confirm that I meet the legal minimum age for tattoo services where I live.</span></label></div>
-          <div class="field full"><button class="btn" type="submit">Prepare booking request</button></div>
-          <div class="form-message" id="formMessage" role="status" aria-live="polite"></div>
-        </form>
-      </div>
-    </section>
-  </main>
-  <footer><div class="wrap footer-inner"><span>© <span id="year"></span> MADDIES INK</span><span>Custom work · Appointment requests · USD</span></div></footer>
-  <script>
-    // Replace this with the studio's real booking email before publishing.
-    const BOOKING_EMAIL = "maddiebecker020@gmail.com";
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.getElementById("bookingForm").addEventListener("submit", function(event) {
-      event.preventDefault();
-      const form = event.currentTarget;
-      if (!form.reportValidity()) return;
-      if (BOOKING_EMAIL === "your-email@example.com") {
-        document.getElementById("formMessage").textContent =
-          "Template setup needed: replace your-email@example.com in this file with the studio's booking email, then publish again.";
-        return;
-      }
-      const data = new FormData(form);
-      const lines = [
-        "Maddies Ink booking request",
-        "",
-        "Name: " + data.get("name"),
-        "Email: " + data.get("email"),
-        "Style: " + data.get("style"),
-        "Placement: " + data.get("placement"),
-        "Approximate size: " + data.get("size"),
-        "Preferred date: " + (data.get("date") || "Flexible"),
-        "",
-        "Idea:",
-        data.get("details")
-      ];
-      const subject = encodeURIComponent("Tattoo booking request - " + data.get("name"));
-      const body = encodeURIComponent(lines.join("\n"));
-      window.location.href = "mailto:" + BOOKING_EMAIL + "?subject=" + subject + "&body=" + body;
-      document.getElementById("formMessage").textContent =
-        "Your email app should open with the request prepared. Send the email to submit it; the appointment is not confirmed until the studio replies.";
-    });
-  </script>
-</body>
-</html>
